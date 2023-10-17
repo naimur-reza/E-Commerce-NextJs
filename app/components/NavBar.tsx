@@ -3,9 +3,10 @@ import React from "react";
 import { FaStore } from "react-icons/fa";
 const NavBar = () => {
   const navOptions = [
-    { label: "All", href: "/" },
-    { label: "Shirts", href: "/shirts" },
-    { label: "Products", href: "/pants" },
+    { label: "Store", href: "/" },
+    { label: "All", href: "/search" },
+    { label: "Shirts", href: "/search/shirts" },
+    { label: "Products", href: "/search/pants" },
   ];
 
   return (
