@@ -37,7 +37,7 @@ export const categories: { label: string; value: Category }[] = [
   { label: "Kids", value: "KIDS" },
 ];
 
-const AddProductForm: React.FC<ProductProps> = () => {
+const AddProductForm = () => {
   const [selectedOptions, setSelectedOptions] = useState<OptionType[]>([]);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [image, setImage] = useState("");
