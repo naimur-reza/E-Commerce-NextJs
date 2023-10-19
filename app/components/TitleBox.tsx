@@ -4,7 +4,7 @@ import { string } from "zod";
 
 const TitleBox = ({ title, price }: { title: string; price: number }) => {
   return (
-    <Box className="=   py-1 px-2">
+    <Box className="=   py-1 px-2 bg-black/70  rounded-full">
       <Flex gap="3" align="center" justify="between">
         <Text as="div" size="4" color="gray" className="font-medium">
           {title}
