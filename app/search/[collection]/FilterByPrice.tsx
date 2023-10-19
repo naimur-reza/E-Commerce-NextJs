@@ -24,7 +24,7 @@ const FilterByPrice = () => {
           router.push("/search" + query);
         }}>
         <Select.Trigger placeholder="Filter by price" />
-        <Select.Content>
+        <Select.Content className="z-50">
           {options.map((option) => (
             <Select.Item key={option.value} value={option.value}>
               {option.label}
