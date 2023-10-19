@@ -1,7 +1,12 @@
 import React from "react";
+import AddProductForm from "./AddProductForm";
 
 const AddProduct = () => {
-  return <div>AddProduct</div>;
+  return (
+    <div>
+      <AddProductForm />
+    </div>
+  );
 };
 
 export default AddProduct;
