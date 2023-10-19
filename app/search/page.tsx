@@ -14,7 +14,7 @@ interface SearchProps {
 }
 
 const SearchProducts = async ({ searchParams }: SearchProps) => {
-  console.log(searchParams);
+  searchParams;
 
   const categories = Object.values(Category);
 
@@ -23,7 +23,7 @@ const SearchProducts = async ({ searchParams }: SearchProps) => {
     : undefined;
 
   const orderBy = searchParams.orderBy;
-  console.log(orderBy);
+  orderBy;
   const products = await prisma.product.findMany({
     where: {
       category: category,
@@ -32,7 +32,7 @@ const SearchProducts = async ({ searchParams }: SearchProps) => {
       price: orderBy,
     },
   });
-  console.log(products);
+  products;
   return (
     <div>
       <Flex gap="3">

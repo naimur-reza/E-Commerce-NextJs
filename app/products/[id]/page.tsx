@@ -3,13 +3,13 @@ import { Button, Flex, Heading, Separator, Text } from "@radix-ui/themes";
 // import React from "react";
 
 const ProductDetails = async ({ params }: { params: { id: string } }) => {
-  console.log(params);
+  params;
   const product = await prisma.product.findUnique({
     where: {
       id: params.id,
     },
   });
-  console.log(product);
+  product;
   return (
     <div className="lg:flex max-w-6xl mx-auto">
       <img src={product?.image} alt="" />

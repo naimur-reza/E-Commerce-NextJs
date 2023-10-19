@@ -4,7 +4,7 @@ interface Props {
   params: { category: string };
 }
 const CategoryPage = ({ params }: Props) => {
-  console.log(params);
+  params;
 
   return <div></div>;
 };

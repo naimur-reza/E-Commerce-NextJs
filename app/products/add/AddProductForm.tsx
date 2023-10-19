@@ -48,7 +48,7 @@ const AddProductForm: React.FC<ProductProps> = () => {
     actionMeta: ActionMeta<OptionType>
   ) => {
     setSelectedOptions(newValue as OptionType[]);
-    console.log(newValue);
+    newValue;
     const totalOptions = newValue.map((option) => option.value);
     setOptions(totalOptions);
   };
@@ -65,16 +65,16 @@ const AddProductForm: React.FC<ProductProps> = () => {
       await axios
         .post("/api/product", newData)
         .then((res) => {
-          console.log(res);
+          res;
           router.push("/");
         })
         .catch((err) => {
-          console.log(err);
+          err;
           setLoading(false);
         });
     });
 
-    console.log(newData);
+    newData;
   };
 
   return (
