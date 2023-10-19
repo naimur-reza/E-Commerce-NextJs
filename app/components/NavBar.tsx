@@ -9,8 +9,6 @@ const NavBar = () => {
   const navOptions = [
     { label: "Store", href: "/" },
     { label: "All", href: "/search" },
-    { label: "Shirts", href: "/search/shirts" },
-    { label: "Products", href: "/search/pants" },
   ];
 
   return (

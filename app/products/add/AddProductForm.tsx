@@ -29,7 +29,7 @@ const sizes: OptionType[] = [
   { label: "XXXL", value: "XXXL" },
 ];
 
-const categories: { label: string; value: Category }[] = [
+export const categories: { label: string; value: Category }[] = [
   { label: "Shirts", value: "SHIRTS" },
   { label: "Pants", value: "PANTS" },
   { label: "Shoes", value: "SHOES" },
