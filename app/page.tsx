@@ -1,3 +1,9 @@
+import GridGallery from "./components/GridGallery";
+
 export default function Home() {
-  return <main>Hello World</main>;
+  return (
+    <div>
+      <GridGallery />
+    </div>
+  );
 }
