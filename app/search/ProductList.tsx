@@ -14,10 +14,8 @@ const ProductList = ({ products }: ProductProps) => {
   return (
     <Grid columns={{ initial: "1", sm: "3" }} gap="4">
       {products.map((product) => (
-        <Link href={"/products/" + product.id}>
-          <Box
-            key={product.id}
-            className=" h-72 overflow-hidden transition-all  space-y-4 hover:border bg-black/30 border-gray-600 rounded-lg cursor-pointer justify-center w-[400px] flex items-center relative">
+        <Link key={product.id} href={"/products/" + product.id}>
+          <Box className=" h-72 overflow-hidden transition-all  space-y-4 hover:border bg-black/30 border-gray-600 rounded-lg cursor-pointer justify-center w-[400px] flex items-center relative">
             <Image
               alt={product.title}
               src={product.image}
