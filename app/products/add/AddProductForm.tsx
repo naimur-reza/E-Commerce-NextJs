@@ -123,7 +123,7 @@ const AddProductForm: React.FC<ProductProps> = () => {
               ))}
             </RadixSelects.Content>
           </RadixSelects.Root>
-          <Button type="submit">
+          <Button type="submit" disabled={loading}>
             Submit this product {loading && <Spinner />}
           </Button>
         </Flex>

@@ -1,5 +1,5 @@
 import prisma from "@/prisma/client";
-import { Box, Grid, Text } from "@radix-ui/themes";
+import { Box, Grid, Heading, Text } from "@radix-ui/themes";
 import Image from "next/image";
 import React from "react";
 import TitleBox from "./TitleBox";
@@ -13,25 +13,34 @@ const GridGallery = async () => {
       price: true,
     },
     take: 3,
+    orderBy: {
+      createdAt: "desc",
+    },
   });
 
   return (
-    <Grid columns={{ initial: "1", sm: "3" }} gap="3">
-      {products.map((product) => (
-        <Box height="100%" className="overflow-hidden   space-y-4   w-[400px]">
-          <Image
-            alt={product.title}
-            src={product.image}
-            width={500}
-            className="hover:scale-105 transition duration-200 rounded-lg"
-            height={200}
-          />
-          <Box className="px-5 pb-5">
-            <TitleBox price={product.price} title={product.title} />
+    <>
+      <Heading>Explore our latest products</Heading>
+      <Grid columns={{ initial: "1", sm: "3" }} gap="3">
+        {products.map((product) => (
+          <Box className=" h-64 overflow-hidden transition-all  space-y-4 hover:border border-gray-600 rounded-lg cursor-pointer  w-[400px] flex items-center relative">
+            <Image
+              alt={product.title}
+              src={product.image}
+              width={600}
+              height={200}
+              style={{
+                objectFit: "cover",
+              }}
+              className="hover:scale-105 transition duration-300 rounded-lg"
+            />
+            <Box className=" absolute bottom-7">
+              <TitleBox price={product.price} title={product.title} />
+            </Box>
           </Box>
-        </Box>
-      ))}
-    </Grid>
+        ))}
+      </Grid>
+    </>
   );
 };
 

@@ -6,7 +6,7 @@ const TitleBox = ({ title, price }: { title: string; price: number }) => {
   return (
     <Box className="=   py-1 px-2">
       <Flex gap="3" align="center" justify="between">
-        <Text as="div" size="4" color="gray">
+        <Text as="div" size="4" color="gray" className="font-medium">
           {title}
         </Text>
         <Text
