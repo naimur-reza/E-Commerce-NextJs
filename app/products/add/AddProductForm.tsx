@@ -10,6 +10,7 @@ import Spinner from "@/app/components/Spinner";
 import prisma from "@/prisma/client";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import { revalidatePath } from "next/cache";
 
 interface ProductProps {
   product: Product;
@@ -67,6 +68,7 @@ const AddProductForm = () => {
         .then((res) => {
           res;
           router.push("/");
+          revalidatePath("/");
         })
         .catch((err) => {
           err;
