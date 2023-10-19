@@ -16,7 +16,7 @@ const ProductList = ({ products }: ProductProps) => {
       {products.map((product) => (
         <Box
           key={product.id}
-          className=" h-72 overflow-hidden transition-all  space-y-4 hover:border bg-black/30 border-gray-600 rounded-lg cursor-pointer justify-center lg:w-[400px] flex items-center relative">
+          className=" h-72 overflow-hidden transition-all  space-y-4 hover:border bg-black/30 border-gray-600    justify-center lg:w-[400px] flex items-center relative">
           <Image
             alt={product.title}
             src={product.image}
@@ -27,7 +27,7 @@ const ProductList = ({ products }: ProductProps) => {
             }}
             className="hover:scale-105 transition duration-300 rounded-lg"
           />
-          <Box className=" absolute bottom-7 left-4">
+          <Box className=" absolute bottom-7 left-4 cursor-pointer">
             <Link href={"/products/" + product.id}>
               <TitleBox price={product.price} title={product.title} />
             </Link>
