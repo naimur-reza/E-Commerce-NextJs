@@ -57,7 +57,7 @@ const AddProductForm: React.FC<ProductProps> = () => {
   const { handleSubmit, register, setError } = useForm();
   const router = useRouter();
   const onsubmit = async (data: any) => {
-    const newData = { ...data, sizes: options, category: selectedCategory };
+    const newData = { ...data, size: options, category: selectedCategory };
 
     setLoading(true);
     await uploadImage(image).then(async (res) => {
@@ -73,6 +73,8 @@ const AddProductForm: React.FC<ProductProps> = () => {
           setLoading(false);
         });
     });
+
+    console.log(newData);
   };
 
   return (

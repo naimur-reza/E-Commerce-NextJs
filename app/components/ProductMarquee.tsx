@@ -14,7 +14,7 @@ const ProductMarquee = async () => {
       <Marquee>
         <Flex>
           {products.map((product) => (
-            <Link key={product.id} href={"/product/details/" + product.id}>
+            <Link key={product.id} href={"/products/" + product.id}>
               <Box
                 mx="3"
                 className=" h-52 overflow-hidden transition-all  space-y-4 hover:border border-gray-600 rounded-lg cursor-pointer  w-[350px] justify-center bg-black flex items-center relative">
