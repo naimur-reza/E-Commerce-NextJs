@@ -1,5 +1,6 @@
 import prisma from "@/prisma/client";
 import { Button, Flex, Heading, Separator, Text } from "@radix-ui/themes";
+import Image from "next/image";
 // import React from "react";
 
 const ProductDetails = async ({ params }: { params: { id: string } }) => {
@@ -12,7 +13,7 @@ const ProductDetails = async ({ params }: { params: { id: string } }) => {
   product;
   return (
     <div className="lg:flex max-w-6xl mx-auto">
-      <img src={product?.image} alt="" />
+      <Image height={300} width={600} src={product?.image!} alt="image" />
 
       <div className="space-y-4 w-full">
         <Heading size="8">{product?.title}</Heading>

@@ -95,7 +95,6 @@ const AddProductForm: React.FC<ProductProps> = () => {
           />
         </TextField.Root>
         <Card>
-          <img src={image} alt="" />
           <TextField.Root>
             <TextField.Input
               variant="soft"
