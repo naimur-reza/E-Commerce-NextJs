@@ -10,6 +10,7 @@ interface SearchProps {
   searchParams: {
     category: Category;
     orderBy: "asc" | "desc";
+    params: string;
   };
 }
 
@@ -27,7 +28,12 @@ const SearchProducts = async ({ searchParams }: SearchProps) => {
   const products = await prisma.product.findMany({
     where: {
       category: category,
+      title: {
+        contains: searchParams.params,
+        mode: "insensitive",
+      },
     },
+
     orderBy: {
       price: orderBy,
     },

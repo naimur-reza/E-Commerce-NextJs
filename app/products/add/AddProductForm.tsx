@@ -66,12 +66,12 @@ const AddProductForm = () => {
       await axios
         .post("/api/product", newData)
         .then((res) => {
-          res;
+           
           router.push("/");
           revalidatePath("/");
         })
         .catch((err) => {
-          err;
+        
           setLoading(false);
         });
     });
