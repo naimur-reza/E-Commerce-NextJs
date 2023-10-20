@@ -12,8 +12,14 @@ const ProductDetails = async ({ params }: { params: { id: string } }) => {
   });
   product;
   return (
-    <div className="lg:flex max-w-6xl mx-auto">
-      <Image height={300} width={600} src={product?.image!} alt="image" />
+    <div className="lg:flex max-w-6xl mx-auto gap-5">
+      <Image
+        className="rounded-lg"
+        height={300}
+        width={600}
+        src={product?.image!}
+        alt="image"
+      />
 
       <div className="space-y-4 w-full">
         <Heading size="8">{product?.title}</Heading>
