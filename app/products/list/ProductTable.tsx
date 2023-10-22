@@ -1,8 +1,10 @@
 import { Product } from "@prisma/client";
-import { TrashIcon } from "@radix-ui/react-icons";
-import { Button, Table } from "@radix-ui/themes";
+
+import { Table } from "@radix-ui/themes";
+
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import DeleteProduct from "./DeleteProduct";
 
 export interface Props {
   products: Product[];
@@ -36,9 +38,7 @@ const ProductTable = ({ products }: Props) => {
                 {product.createdAt.toLocaleString()}
               </Table.Cell>
               <Table.Cell>
-                <Button color="red">
-                  <TrashIcon />
-                </Button>
+                <DeleteProduct productId={product.id} />
               </Table.Cell>
             </Table.Row>
           ))}
