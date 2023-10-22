@@ -28,9 +28,6 @@ const ProductMarquee = async () => {
                   }}
                   className="hover:scale-105 transition duration-300 rounded-lg"
                 />
-                <Box className=" absolute bottom-7">
-                  <TitleBox price={product.price} title={product.title} />
-                </Box>
               </Box>
             </Link>
           ))}
