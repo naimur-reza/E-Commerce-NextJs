@@ -17,7 +17,7 @@ const ProductMarquee = async () => {
             <Link key={product.id} href={"/products/" + product.id}>
               <Box
                 mx="3"
-                className=" h-52 overflow-hidden transition-all  space-y-4 hover:border border-gray-600 rounded-lg cursor-pointer w-[300px]  lg:w-[350px] justify-center bg-black flex items-center relative">
+                className=" h-52 overflow-hidden transition-all  space-y-4 hover:border border-gray-600 rounded-lg cursor-pointer w-[300px]  lg:w-[260px] justify-center bg-gray-300/50 flex items-center relative">
                 <Image
                   alt={product.title}
                   src={product.image}

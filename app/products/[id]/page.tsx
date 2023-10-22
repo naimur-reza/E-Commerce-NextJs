@@ -24,9 +24,11 @@ const ProductDetails = async ({ params }: { params: { id: string } }) => {
       <div className="space-y-4 w-full">
         <Heading size="8">{product?.title}</Heading>
 
-        <p className="px-3 py-2 w-fit text-center bg-blue-500 font-medium rounded-full">
+        <Text
+          as="p"
+          className="px-3 py-2 w-fit text-center bg-blue-500 font-medium rounded-full text-white">
           Tk: {product?.price}
-        </p>
+        </Text>
         <Separator size="4" />
         <Text as="p" size="6">
           Available Size

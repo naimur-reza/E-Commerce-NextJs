@@ -24,7 +24,7 @@ const NavBar = () => {
     router.push("/search" + query);
   };
   return (
-    <nav className="px-5 h-14 border-b flex items-center mb-5 border-gray-600">
+    <nav className="px-5 h-14 border-b flex items-center mb-5 ">
       <div className="flex items-center space-x-5">
         <Link href={"/"}>
           <FaStore size={18} />
@@ -34,7 +34,7 @@ const NavBar = () => {
             <li key={item.href}>
               <Link
                 className={clsx({
-                  "text-gray-200": pathname === item.href,
+                  "text-gray-800": pathname === item.href,
                   "text-gray-500": pathname !== item.href,
                 })}
                 href={item.href}>

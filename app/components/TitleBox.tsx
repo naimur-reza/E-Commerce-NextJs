@@ -4,14 +4,18 @@ import { string } from "zod";
 
 const TitleBox = ({ title, price }: { title: string; price: number }) => {
   return (
-    <Box className="=   py-1 px-2 bg-black/70  rounded-full">
-      <Flex gap="3" align="center" justify="between">
-        <Text as="div" size="4" color="gray" className="font-medium">
+    <Box className="px-1  bg-black/70 rounded-full text-white/80">
+      <Flex
+        direction={{ initial: "column", md: "row" }}
+        gap="2"
+        align="center"
+        justify="between">
+        <Text as="div" size={{ initial: "1", md: "4" }} className="font-medium">
           {title}
         </Text>
         <Text
-          size="3"
-          className="bg-gray-400/50 px-2 py-1 rounded-full font-semibold">
+          size={{ initial: "1", md: "3" }}
+          className=" px-2 py-1 rounded-full font-semibold">
           TK: {price}
         </Text>
       </Flex>

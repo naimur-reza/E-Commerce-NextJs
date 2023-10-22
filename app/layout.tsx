@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={poppins.variable}>
         <NavBar />
-        <Theme appearance="dark">
+        <Theme appearance="light">
           <main className="p-5 min-h-[calc(100vh-132px)] ">{children}</main>
         </Theme>
         <Footer />
