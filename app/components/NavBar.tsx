@@ -51,8 +51,8 @@ const NavBar = () => {
             placeholder="Search products…"
           />
           <TextField.Slot>
-            <IconButton onClick={handleSearch} size="1" variant="ghost">
-              <MagnifyingGlassIcon height="16" width="16" />
+            <IconButton onClick={handleSearch} size="3" variant="outline">
+              <MagnifyingGlassIcon height="20" width="20" />
             </IconButton>
           </TextField.Slot>
         </TextField.Root>

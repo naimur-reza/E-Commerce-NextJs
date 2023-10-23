@@ -15,16 +15,15 @@ const ProductList = ({ products }: ProductProps) => {
     <Grid columns={{ initial: "2", sm: "4" }} gap="3">
       {products.map((product) => (
         <Link key={product.id} href={"/products/" + product.id}>
-          <Card size="2">
+          <Card size="2" className="">
             <Inset side="top" pb="current">
               <Image
                 width={400}
-                height={300}
+                height={200}
                 src={product.image}
                 alt="Bold typography"
                 style={{
                   display: "block",
-                  objectFit: "cover",
 
                   backgroundColor: "var(--gray-5)",
                 }}

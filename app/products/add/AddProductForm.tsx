@@ -66,12 +66,10 @@ const AddProductForm = () => {
       await axios
         .post("/api/product", newData)
         .then((res) => {
-           
           router.push("/");
           revalidatePath("/");
         })
         .catch((err) => {
-        
           setLoading(false);
         });
     });
@@ -85,28 +83,32 @@ const AddProductForm = () => {
       <form className="space-y-4" onSubmit={handleSubmit(onsubmit)}>
         <TextField.Root>
           <TextField.Input
+            required
             {...register("title")}
             placeholder="Product title..."
           />
         </TextField.Root>
         <TextField.Root>
           <TextField.Input
+            required
             {...register("price", { valueAsNumber: true })}
             type="number"
             placeholder="Price..."
           />
         </TextField.Root>
-        <Card>
-          <TextField.Root>
-            <TextField.Input
-              variant="soft"
-              onChange={(e: any) => setImage(e.target.files[0])}
-              type="file"
-              placeholder="Upload your image..."
-            />
-          </TextField.Root>
-        </Card>
+
+        <TextField.Root>
+          <TextField.Input
+            required
+            variant="soft"
+            onChange={(e: any) => setImage(e.target.files[0])}
+            type="file"
+            placeholder="Upload your image..."
+          />
+        </TextField.Root>
+
         <Select
+          required
           isMulti
           options={sizes}
           placeholder="Select sizes"
@@ -116,6 +118,7 @@ const AddProductForm = () => {
         />
         <Flex justify="between">
           <RadixSelects.Root
+            required
             onValueChange={(value) => setSelectedCategory(value)}>
             <RadixSelects.Trigger placeholder="Select category" />
             <RadixSelects.Content>
